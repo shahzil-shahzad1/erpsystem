@@ -18,18 +18,25 @@ import { fetchDashboardData } from "@/lib/analytics/data";
 import { IconRenderer } from "@/components/analytics/IconRenderer";
 
 import { ChartData } from '@/lib/analytics/chart';
+import { SalesData } from '@/lib/analytics/chart';
 
 const BusinessAnalyticsPage: React.FC =  async () => {
 
  const {
-    financialData,
-    salesByCategoryData,
-    inventoryFlowData,
-    hrCostTrendData,
-    analyticsOverviewCards,
-    analyticsAlerts
-  } = await fetchDashboardData();
-const financialData: ChartData = financialData;
+  financialData,
+  salesByCategoryData,
+  inventoryFlowData,
+  hrCostTrendData,
+  analyticsOverviewCards,
+  analyticsAlerts
+}: {
+  financialData: ChartData;
+  salesByCategoryData: SalesData;
+  inventoryFlowData: ChartData;
+  hrCostTrendData: ChartData;
+  analyticsOverviewCards: any; // Replace with proper type
+  analyticsAlerts: any; // Replace with proper type
+} = await fetchDashboardData();
 
 
   return (
