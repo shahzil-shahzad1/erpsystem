@@ -39,15 +39,15 @@ interface AnalyticsAlert {
   text: string;
 }
 
-// Define a proper return type for fetchDashboardData
-interface DashboardData {
-  financialData: ChartData;
-  salesByCategoryData: SalesData;
-  inventoryFlowData: ChartData;
-  hrCostTrendData: ChartData;
-  analyticsOverviewCards: StatCardProps[];
-  analyticsAlerts: AnalyticsAlert[];
-}
+// // Define a proper return type for fetchDashboardData
+// interface DashboardData {
+//   financialData: ChartData;
+//   salesByCategoryData: SalesData;
+//   inventoryFlowData: ChartData;
+//   hrCostTrendData: ChartData;
+//   analyticsOverviewCards: StatCardProps[];
+//   analyticsAlerts: AnalyticsAlert[];
+// }
 
 const BusinessAnalyticsPage: React.FC =  async () => {
 
@@ -58,7 +58,7 @@ const BusinessAnalyticsPage: React.FC =  async () => {
     hrCostTrendData,
     analyticsOverviewCards,
     analyticsAlerts
-  } = await fetchDashboardData() as DashboardData;
+  } = await fetchDashboardData();
 
   return (
     <div className="min-h-screen p-6 sm:p-8 lg:p-10 font-sans text-gray-900 dark:text-white">
