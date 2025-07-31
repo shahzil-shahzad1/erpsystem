@@ -74,10 +74,10 @@ const BusinessAnalyticsPage: React.FC =  async () => {
       {/* Top Charts Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         {/* Key Financial Trends Chart */}
-        <KeyFinancialTrends financialdata = {financialData}/>
+        <KeyFinancialTrends financialData = {financialData}/>
 
         {/* Sales Performance by Category Chart */}
-        <SalesPerformance salesData = {salesByCategoryData}/>
+        <SalesPerformance salesByCategoryData = {salesByCategoryData}/>
       </div>
 
       {/* Middle Charts Section */}
@@ -86,7 +86,7 @@ const BusinessAnalyticsPage: React.FC =  async () => {
         <InventoryFlowChart inventoryFlowData = {inventoryFlowData}/>
 
         {/* Workforce & Payroll Cost Trend Chart */}
-       <WorkforcePayrollChart hrcostdata={hrCostTrendData} />
+       <WorkforcePayrollChart hrCostTrendData={hrCostTrendData} />
       </div>
 
       {/* Critical Alerts & Actionable Insights Section */}
