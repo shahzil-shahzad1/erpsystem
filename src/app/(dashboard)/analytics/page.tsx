@@ -34,8 +34,6 @@ const BusinessAnalyticsPage: React.FC =  async () => {
   salesByCategoryData: SalesData;
   inventoryFlowData: ChartData;
   hrCostTrendData: ChartData;
-  analyticsOverviewCards: any; // Replace with proper type
-  analyticsAlerts: any; // Replace with proper type
 } = await fetchDashboardData();
 
 
