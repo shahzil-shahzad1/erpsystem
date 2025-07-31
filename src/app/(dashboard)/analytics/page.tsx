@@ -17,18 +17,7 @@ import WorkforcePayrollChart from '@/components/analytics/WorkforePayrollChart';
 import { fetchDashboardData } from "@/lib/analytics/data";
 import { IconRenderer } from "@/components/analytics/IconRenderer";
 
-interface KeyFinancialTrendsProps {
-  financialdata: {  // or financialData if that's what's expected
-    labels: any[];
-    datasets: {
-      label: string;
-      data: any[];
-      fill: boolean;
-      borderColor: string;
-      tension: number;
-    }[];
-  };
-}
+import { ChartData } from '@/lib/analytics/chart';
 
 const BusinessAnalyticsPage: React.FC =  async () => {
 
@@ -40,6 +29,7 @@ const BusinessAnalyticsPage: React.FC =  async () => {
     analyticsOverviewCards,
     analyticsAlerts
   } = await fetchDashboardData();
+const financialData: ChartData = financialData;
 
 
   return (
