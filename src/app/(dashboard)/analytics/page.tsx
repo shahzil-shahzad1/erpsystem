@@ -17,28 +17,6 @@ import WorkforcePayrollChart from '@/components/analytics/WorkforePayrollChart';
 import { fetchDashboardData } from "@/lib/analytics/data";
 import { IconRenderer } from "@/components/analytics/IconRenderer";
 
-import { ChartData } from '@/lib/analytics/chart';
-import { SalesData } from '@/lib/analytics/chart';
-
-interface StatCardProps {
-  id?: number;
-  title: string;
-  value: string;
-  situation: string;
-  status: string;
-  icon: string;
-  iconBgColor: string;
-  iconColor: string;
-  trend?: string;
-}
-
-interface AnalyticsAlert {
-  type: string;
-  icon: string;
-  color: string;
-  text: string;
-}
-
 // // Define a proper return type for fetchDashboardData
 // interface DashboardData {
 //   financialData: ChartData;
