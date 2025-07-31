@@ -34,29 +34,31 @@ interface StatCardProps {
 
 interface AnalyticsAlert {
   type: string;
-  icon: string; // or IconType if using react-icons
-  color: string; // Tailwind color class
+  icon: string;
+  color: string;
   text: string;
 }
 
-const BusinessAnalyticsPage: React.FC =  async () => {
-
- const {
-  financialData,
-  salesByCategoryData,
-  inventoryFlowData,
-  hrCostTrendData,
-  analyticsOverviewCards,
-  analyticsAlerts
-}: {
+// Define a proper return type for fetchDashboardData
+interface DashboardData {
   financialData: ChartData;
   salesByCategoryData: SalesData;
   inventoryFlowData: ChartData;
   hrCostTrendData: ChartData;
-  analyticsOverviewCards : StatCardProps,
-  analyticsAlerts : AnalyticsAlert,
-} = await fetchDashboardData();
+  analyticsOverviewCards: StatCardProps[];
+  analyticsAlerts: AnalyticsAlert[];
+}
 
+const BusinessAnalyticsPage: React.FC =  async () => {
+
+  const {
+    financialData,
+    salesByCategoryData,
+    inventoryFlowData,
+    hrCostTrendData,
+    analyticsOverviewCards,
+    analyticsAlerts
+  } = await fetchDashboardData() as DashboardData;
 
   return (
     <div className="min-h-screen p-6 sm:p-8 lg:p-10 font-sans text-gray-900 dark:text-white">
