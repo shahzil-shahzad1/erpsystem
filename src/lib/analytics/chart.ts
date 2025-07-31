@@ -1,17 +1,17 @@
 // types/chart.ts
-export interface ChartDataset {
-  label: string;
-  data: number[];
-  fill: boolean;
-  borderColor: string;
-  tension: number;
-  yAxisID?: string;
-}
-
 export interface ChartData {
   labels: string[];
-  datasets: ChartDataset[];
+  datasets: {
+    label: string;
+    data: number[];
+    fill?: boolean;
+    borderColor?: string;
+    tension?: number;
+    backgroundColor?: string | string[];
+    borderWidth?: number;
+  }[];
 }
+
 
 export interface SalesDataset {
   label: string;
