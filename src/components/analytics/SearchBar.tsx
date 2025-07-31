@@ -5,7 +5,7 @@ import { Search, ChevronDown, Download } from 'lucide-react';
 
 import StatCard from '@/components/analytics/StatCard';
 
-export interface StatCardProps {
+interface StatCardProps {
   id?: number;
   title: string;
   value: string;
@@ -17,8 +17,12 @@ export interface StatCardProps {
   trend?: string;
 }
 
+interface SearchBarProps {
+  analyticsoverviewData: StatCardProps[];  // Changed prop name to be more generic
+}
 
-const SearchBar = ({analyticsoverviewData}: {analyticsoverviewData: StatCardProps}) => {
+
+const SearchBar = ({analyticsoverviewData}: {analyticsoverviewData: SearchBarProps}) => {
   const [selectedTimePeriod, setSelectedTimePeriod] = useState('Custom Range');
   const [searchTerm, setSearchTerm] = useState('');
 
