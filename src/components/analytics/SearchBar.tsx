@@ -17,7 +17,11 @@ export interface StatCardProps {
   trend?: string;
 }
 
-const SearchBar = ({analyticsoverviewData}: {analyticsoverviewData: StatCardProps}) => {
+interface SearchBarProps {
+  analyticsoverviewData: StatCardProps[]; // Now accepts array
+}
+
+const SearchBar = ({analyticsoverviewData}: {analyticsoverviewData: SearchBarProps}) => {
   const [selectedTimePeriod, setSelectedTimePeriod] = useState('Custom Range');
   const [searchTerm, setSearchTerm] = useState('');
 
