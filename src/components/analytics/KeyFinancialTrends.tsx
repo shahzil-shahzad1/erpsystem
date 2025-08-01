@@ -5,21 +5,21 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, Tooltip, Legend, ChartTitle);
 
-interface ChartDataset {
-  label: string;
-  data: number[];
-  fill?: boolean;
-  borderColor: string;
-  tension?: number;
-  // Additional Chart.js dataset properties can be added as needed
-  backgroundColor?: string;
-  borderWidth?: number;
-}
+// interface ChartDataset {
+//   label: string;
+//   data: number[];
+//   fill?: boolean;
+//   borderColor: string;
+//   tension?: number;
+//   // Additional Chart.js dataset properties can be added as needed
+//   backgroundColor?: string;
+//   borderWidth?: number;
+// }
 
-interface FinancialTrendData {
-  labels: string[];
-  datasets: ChartDataset[];
-}
+// interface FinancialTrendData {
+//   labels: string[];
+//   datasets: ChartDataset[];
+// }
 
 const KeyFinancialTrends = ({ financialData } : any) => {
   return (
