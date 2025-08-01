@@ -21,7 +21,7 @@ interface FinancialTrendData {
   datasets: ChartDataset[];
 }
 
-const KeyFinancialTrends = ({ financialData } : FinancialTrendData) => {
+const KeyFinancialTrends = ({ financialData } : any) => {
   return (
     <div className="inset-0 bg-white/90 dark:bg-black/80 backdrop-blur-md rounded-xl shadow-lg p-6 border border-gray-200 dark:border-zinc-900">
       <h2 className="text-lg font-bold mb-4 text-zinc-900 dark:text-white">Key Financial Trends</h2>
