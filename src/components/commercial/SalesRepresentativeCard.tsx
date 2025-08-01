@@ -23,7 +23,7 @@ const SalesRepresentativeCard = ({
 
   // Determine status color and icon
   let statusColor = 'text-gray-500';
-  let statusIcon = null;
+  let statusIcon: React.ReactNode = null;
   switch (status) {
     case 'active':
       statusColor = 'text-green-500';
